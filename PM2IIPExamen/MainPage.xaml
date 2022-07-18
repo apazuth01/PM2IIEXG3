@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:media1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             x:Class="PM2IIPExamen.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+    <StackLayout>
+
+        <StackLayout>
+
+            <media1:VideoView x:Name="video" 
+                              AutoPlay="False" 
+                              ShowControls="True" 
+                              WidthRequest ="320"
+                              HeightRequest="400"
+                               Margin="5,5,5,0"
+                                  />
+        </StackLayout>
+        
+        <Image Source="paisajes.gif" x:Name="imgFoto" WidthRequest="20" HeightRequest="20" IsVisible="false" />
+        
+        
+        
+        
+       
+
+
+
+        <Grid Margin="20,5,20,0">
+
+            <Label Text="Latitud:"
+                Grid.Column="0"
+                Grid.Row="0"
+               Margin="10,0,0,0"
+               HorizontalOptions="StartAndExpand" 
+               FontSize="14"
+               TextColor="Black"/>
+            
+            <Label x:Name="lblLatitud" 
+                 Grid.Column="1"
+                Grid.Row="0"                 
+                   FontSize="14"
+               TextColor="DarkGreen"/>
+
+            <Label Text="Longitud:"
+                Grid.Column="0"
+                Grid.Row="1"
+               Margin="10,0,0,0"
+               HorizontalOptions="StartAndExpand" 
+               FontSize="14"
+               TextColor="Black"/>
+            
+
+            <Label Grid.Column="1" 
+                   Grid.Row="1"
+                   x:Name="lblLongitud" 
+                   Margin="10,0,0,0"                   
+                   FontSize="14"
+               TextColor="DarkGreen"/>
+               
+            
+           
+
+        </Grid>
+            <Entry Placeholder="Descripción"                     
+                    Margin="10,0,30,0"
+                   FontSize="14"
+                   TextColor="Black"
+                       x:Name="txtDescripcion" />
+
+            <Button x:Name="btnFoto" 
+                Text="Tomar Video" 
+                    Grid.Column="0" 
+                   Grid.Row="3"
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    FontSize="16"
+                    CornerRadius="7"
+                     TextTransform="None"
+                    Margin="10,0,30,0"                    
+                Clicked="btnFoto_Clicked"/>
+
+            <Label x:Name="lblAudio" 
+                   Margin="10,5,0,0"
+                   TextColor="Blue"
+                   Text="Estatus Audio" />
+        
+        <Grid ColumnDefinitions="*,*,*">
+            <Button x:Name="btnGrabar"
+                    Text="Grabar" 
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    FontSize="14"
+                    CornerRadius="7"
+                     TextTransform="None"
+                    Margin="10,0,0,0"
+                    Clicked="btnGrabar_Clicked"/>
+            <Button Grid.Column="1" 
+                    x:Name="btnDetener" 
+                    Text="Detener" 
+                      BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    FontSize="14"
+                    CornerRadius="7"
+                     TextTransform="None"
+                    Margin="0,0,0,0"
+                    Clicked="btnDetener_Clicked"/>
+            <Button Grid.Column="2" 
+                    x:Name="btnReproducir" 
+                    Text="Reproducir"
+                      BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    FontSize="14"
+                    CornerRadius="7"
+                     TextTransform="None"
+                    Margin="0,0,10,0"
+                    Clicked="btnReproducir_Clicked"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="*,*" >
+            <Button x:Name="btnGuardar" 
+                    Text="Guardar"
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    FontSize="14"
+                    CornerRadius="7"
+                     TextTransform="None"
+                    Margin="10,0,0,0"
+                    Clicked="btnGuardar_Clicked"/>
+            <Button Grid.Column="1" 
+                    x:Name="btnListar" 
+                    Text="Ver Lista" 
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    FontSize="14"
+                    CornerRadius="7"
+                     TextTransform="None"
+                    Margin="0,0,10,0"
+                    Clicked="btnListar_Clicked"/>
+        </Grid>
+
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
